@@ -27,3 +27,7 @@ Here's a [link](https://fis.fda.gov/extensions/FPD-QDE-FAERS/FPD-QDE-FAERS.html)
 ## Data Preprocessing
 
 The datasets contained millions of rows, so I chose to import and store them in a relational database using Microsoft SQL Server. To optimize queries and minimize processing load in Power Query, I loaded the datasets using SQL statements in a filtered and nearly clean state, applying the concept of query folding. This approach ensured that most data processing was handled by SQL Server, with only minimal cleaning required in Power Query. The final dataset for analysis consisted of 401,425 rows and 10 columns.
+
+The M code for the data cleaning and transformation steps applied on the final dataset in Power Query can be seen below:
+
+![Screenshot 2025-02-16 194127](https://github.com/user-attachments/assets/3c7d1c53-c6b5-476f-9cb0-8464474126f6)
