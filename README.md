@@ -1,7 +1,7 @@
 # Comparing-Adverse-Effects-of-Tramal-and-Lyrica-Drugs
 
 ## Project Background
-A group of doctors from Germany are exploring the potential side effects of drugs used to treat neurological pain. In addition to common treatments like gabapentin and Lyrica, they have found Tramal to be an effective option. Since these medications have similar effects, the doctors are interested in comparing their adverse effects. This comparison would help them choose the drug with fewer side effects for each patient, leading to better treatment decisions.
+A group of doctors from Germany are exploring the potential adverse effects of drugs used to treat neurological pain. In addition to common treatments like gabapentin and Lyrica, they have found Tramal to be an effective option. Since these medications have similar effects, the doctors are interested in comparing their adverse effects. This comparison would help them choose the drug with fewer adverse effects for each patient, leading to better treatment decisions.
 
 Insights would be provided on the following key areas:
 
@@ -11,40 +11,47 @@ Insights would be provided on the following key areas:
 
 
 ## Data Structure
-The data is extracted from the FAERS database, which is managed by the FDA in the U.S. The FDA Adverse Event Reporting System (FAERS) collects reports on medication side effects and errors. It is used to monitor the safety of drugs and biological therapies after they have been approved for the market.
+The data is extracted from the FAERS database, which is managed by the FDA in the U.S. The FDA Adverse Event Reporting System (FAERS) collects reports on medication adverse effects and errors. It is used to monitor the safety of drugs and biological therapies after they have been approved for the market.
 
 The FAERS dataset only contains data on a quarterly basis. I utilized the demographic, drugs and reactions datasets to find the adverse effects of the drugs and merged all four quarters from 2019. 
 I imported the relevant datasets into SQL Server and established a connection with Power Query for the data cleaning process. 
 Here's a [link](https://fis.fda.gov/extensions/FPD-QDE-FAERS/FPD-QDE-FAERS.html) to the datasets. The SQL queries used to import the datasets to Power Query are also attached.
 
+Key Terms:
+- Adverse effect: An unwanted or harmful reaction that occurs after taking a medication or undergoing a medical treatment.
+- Primary Suspect: Most likely responsible for the adverse effect.
+- Secondary Suspect: May contribute to the adverse effect but isn’t the main cause.
+- Interacting: Drug affects how another drug behaves.
+- Concomitant: Drug is taken at the same time as other drug but not necessarily related to the reaction.
+
 ## Insights
 
-- Gender Differences in Side Effects
-1. Tramal: Most reported side effects come from women (63%), while men account for 27%, and 10% are unknown.
+- Gender Differences in Adverse Effects
+1. Tramal: Most reported adverse effects come from women (63%), while men account for 27%, and 10% are unknown.
 
 2. Lyrica: Reports are even more skewed, with 72% female, 25% male, and 3% unknown.
    
 Women seem to report more adverse reactions for both drugs, which could be due to differences in prescription rates, metabolism, or reporting behaviour.
 
-- Top Brands Reporting Side Effects
-1. Tramal Side Effects Reports:
-Most reported side effects for Tramal are linked to Pfizer (49%), followed by AstraZeneca (31%) and Novartis (20%).
-This could suggest that these pharmaceutical companies may have the highest market share or distribution of Tramal, or their formulations may have a higher likelihood of reported side effects.
+- Top Brands Reporting Adverse Effects
+1. Tramal Adverse Effects Reports:
+Most reported adverse effects for Tramal are linked to Pfizer (49%), followed by AstraZeneca (31%) and Novartis (20%).
+This could suggest that these pharmaceutical companies may have the highest market share or distribution of Tramal, or their formulations may have a higher likelihood of reported adverse effects.
 
-2. Lyrica Side Effects Reports:
+2. Lyrica Adverse Effects Reports:
 Once again, Pfizer dominates the reports for Lyrica, constituting 95% of cases, with AbbVie constituting only 3% and Roche constituting 2%.
 This could suggest that Pfizer is the leading manufacturer of Lyrica or that most side effect reports are linked to Pfizer's formulation.
 
 Pfizer appears prominently in both drugs, but it plays a much bigger role in Lyrica reports than in Tramal.
 Further investigation could help determine if these trends are due to differences in drug formulation, variation in dosages, or reporting biases.
 
-- Top Side Effects
-1. Tramal Side Effects:
+- Top Adverse Effects
+1. Tramal Adverse Effects:
 - The most reported issues are drug abuse, toxicity to various agents, and drug dependence.
 - This suggests that Tramal has a high potential for misuse and addiction, making it a concern for long-term use.
 - The toxicity related reports could also suggest that the overdose of the drug as well as its interaction with other drugs is posing danger to the patient. 
 
-2. Lyrica Side Effects:
+2. Lyrica Adverse Effects:
 - The most common issues include pain, drug ineffectiveness, and malaise (general discomfort or unease).
 - "Pain" showing up as a top side effect could suggest that some patients may not experience the expected pain relief from Lyrica.
 - "Drug ineffective" reports reaffirms the possibility that the medication does not work as intended for all users.
@@ -60,7 +67,8 @@ Both drugs require close monitoring to ensure they are used safely and effective
 
 
 ## Logic behind Insight Generation
-To determine the top adverse effects of Tramal compared to Lyrica, I filtered the data based on the 'Primary Suspect Drug' role. A drug is classified as a primary suspect when it is the most likely cause of an adverse effect. In the case of Tramal, some adverse effects were reported when it was used in combination with other drugs, but specific dosage information was not available. Hence, the need to emphasize side effects where Tramal is the most likely cause. This also reaffirms the need for further investigation into how drug dosage influences adverse effects. 
+To determine the top adverse effects of Tramal compared to Lyrica, I filtered the data based on the 'Primary Suspect Drug' role. A drug is classified as a primary suspect when it is the most likely cause of an adverse effect. There were instances where the drugs were labeled as a Secondary Suspect, Interacting or Concomitant Drug. Hence, the need to emphasize adverse effects where Tramal or Lyrica is the most likely cause. Also, some adverse effects were reported when the drugs (Tramal/Lyrica) were taken in combination with other drugs. This affirms the need for further investigation into how drug dosage influences adverse effects. 
+
 
 ## Data Pre-processing
 
