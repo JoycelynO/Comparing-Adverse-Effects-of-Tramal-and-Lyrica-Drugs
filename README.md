@@ -33,7 +33,7 @@ Key Terms:
    
 Women seem to report more adverse reactions for both drugs, which could be due to differences in prescription rates, metabolism, or reporting behaviour.
 
-- Top Brands Reporting Adverse Effects
+- Top 3 Brands Reporting Adverse Effects
 1. Tramal Adverse Effects Reports:
 Most reported adverse effects for Tramal are linked to Pfizer (49%), followed by AstraZeneca (31%) and Novartis (20%).
 This could suggest that these pharmaceutical companies may have the highest market share or distribution of Tramal, or their formulations may have a higher likelihood of reported adverse effects.
@@ -61,7 +61,9 @@ Tramal is associated with addiction risks and toxicity concerns, making its regu
 Lyrica may not always provide effective pain relief, leading to patients experiencing continued discomfort or dissatisfaction.
 Both drugs require close monitoring to ensure they are used safely and effectively in patients.
 
-![Screenshot 2025-02-16 184919](https://github.com/user-attachments/assets/4705bea8-c7a4-4d2e-9d3b-b11ecf3b75f3)
+
+![Screenshot 2025-02-19 092521](https://github.com/user-attachments/assets/799b4fce-b47e-47f7-a8de-75d1a0e730c0)
+
 
 ![Screenshot 2025-02-16 185056](https://github.com/user-attachments/assets/dba7f03b-befc-450d-be76-4d79249fde05)
 
