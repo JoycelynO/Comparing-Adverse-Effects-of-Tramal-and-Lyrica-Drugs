@@ -13,7 +13,7 @@ Insights would be provided on the following key areas:
 ## Data Structure
 The data is extracted from the FAERS database, which is managed by the FDA in the U.S. The FDA Adverse Event Reporting System (FAERS) collects reports on medication adverse effects and errors. It is used to monitor the safety of drugs and biological therapies after they have been approved for the market.
 
-The FAERS dataset only contains data on a quarterly basis. I utilized the demographic, drugs and reactions datasets to find the adverse effects of the drugs and merged all four quarters from 2019. 
+The FAERS dataset only contains data on a quarterly basis. I utilized the demographic (1.7 mill rows), drugs (7.2 mill rows) and reactions (5.6mill rows) datasets to find the adverse effects of the drugs and merged all four quarters from 2019. 
 I imported the relevant datasets into SQL Server and established a connection with Power Query for the data cleaning process. 
 Here's a [link](https://fis.fda.gov/extensions/FPD-QDE-FAERS/FPD-QDE-FAERS.html) to the datasets. The SQL queries used to import the datasets to Power Query are also attached.
 
